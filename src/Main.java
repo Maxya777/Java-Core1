@@ -1,11 +1,12 @@
 public class Main {
     public static void main(String[] args) {
 
-//            Calculator calc = Calculator.instance.get();
-//
-//                int a = calc.plus.apply(1, 2);
-//                int b = calc.minus.apply(1, 1);
-//                int c = calc.divide.apply(a, b);
+            Calculator calc = Calculator.instance.get();
+
+                int a = calc.plus.apply(1, 2);
+                int b = calc.minus.apply(1, 1);
+                int c = calc.divide.apply(a, b);
+                System.out.println(c);
 
         // Ошибка ArithmeticException возникла по причине того, что на 0 делить нельзя
         //int a = 3; int b = 0; int c = a/b = 3/0;
@@ -14,13 +15,13 @@ public class Main {
         // Либо отредактировать в классе Calculator бинарный оператор:
         // BinaryOperator<Integer> divide = (x, y) -> y > 0 ? x / y : y < 0 ? x / y : 0;
 
-        Calculator calc = Calculator.instance.get();
-        try {
-            int a = calc.plus.apply(1, 2);
-            int b = calc.minus.apply(1, 1);
-            int c = calc.divide.apply(a, b);
-        } catch (ArithmeticException e) {
-            System.out.println("Ошибка! Делить на 0 нельзя");
-        }
+//        Calculator calc = Calculator.instance.get();
+//        try {
+//            int a = calc.plus.apply(1, 2);
+//            int b = calc.minus.apply(1, 1);
+//            int c = calc.divide.apply(a, b);
+//        } catch (ArithmeticException e) {
+//            System.out.println("Ошибка! Делить на 0 нельзя");
+//        }
     }
 }
